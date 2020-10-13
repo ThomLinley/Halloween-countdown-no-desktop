@@ -9,8 +9,8 @@ do
 	#Date counting down to
 	Date="Oct 31"
 
-	#Path of video files
-	Path="/home/thom/Hal/"
+	#Path of .mp4 video files
+	Path="/path/to/videos/"
 
 	#Date calculation
 	Days=$(($(date -d "$Date" +%j) - $(date +%j)))
@@ -24,7 +24,7 @@ do
 	#TextHight
 	Hight=$(( ( RANDOM % 3 ) + 1 ))
 
-	#Text overlay settings
+	#Text overlay settings, may need to change the font to one on your system
 	TxtSet="drawtext=fontfile=usr/share/fonts/cantarell/CantarellExtraBold.otf: \
 	text ="$Text": fontcolor=white: fontsize=60: x=(w-text_w)/2: y=(h-text_h)/$Hight"
 
